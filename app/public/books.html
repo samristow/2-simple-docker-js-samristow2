@@ -107,56 +107,74 @@
           <div class="demo2">
             
             
-              <table id="taskTable" class="table table-bordered table-striped table-hover table-condensed ">
-                <thead>
-                  <tr id="title_of_table">
-                    <th>Title</th>
-                    <th>Author</th> 
-                    <th>Year Published</th>
-                    <th>Publisher</th>
-                    <th>Page Count</th>
-                    <th>MSRP</th>
-                  </tr>
-                </thead>
-          
-                <tbody>
-                  <tr>
-                    <td>Being Mortal</td>	
-                    <td>Atul Gawande	</td>
-                    <td>2014</td>
-                    <td>Metropolitan Books</td>
-                    <td>304</td>
-                    <td>$10.39</td>
-                  </tr>
-          
-                  <tr >
-                    <td>The Defining Decade</td>
-                    <td>Meg Jay</td>
-                    <td>2012</td>
-                    <td>Canongate Books</td>
-                    <td>272</td>
-                    <td>$8.75</td>
-                  </tr>
-          
-                  <tr>
-                    <td>The 7 Habbits of Highly Effective People</td>
-                    <td>Stephen Covey</td>
-                    <td>1989</td>
-                    <td>Free Press</td>
-                    <td>381</td>
-                    <td>$12.53</td>
-                  </tr>
-          
-                  <tr>
-                    <td>The Subtle Art of Not Giving a Fu*k</td>
-                    <td>Mark Manson</td>
-                    <td>2016</td>
-                    <td>HarperOne</td>
-                    <td>224</td>
-                    <td>$12.99</td>
-                  </tr>
-          
-                 
+       <!--
+    <h1>Reading List</h1>
+
+      <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Author(s)</th>
+      <th scope="col">Year Published</th>
+      <th scope="col">Publisher</th>
+        <th scope="col">Page Count</th>
+        <th scope="col">MSRP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">War and Peace</th>
+      <td>Leo Tolstoy</td>
+      <td>1869</td>
+      <td>The Russian Messager</td>
+      <td>1,225</td>
+        <td>$1000</td>
+    </tr>
+      <tr>
+      <th scope="row">Love in the Time of Cholera</th>
+      <td>Gabriel garcia Marquez</td>
+      <td>1985</td>
+      <td>Editorial Oveja Negra</td>
+      <td>348</td>
+        <td>$13</td>
+    </tr>
+      <tr>
+      <th scope="row">Lord of the Rings: The Return of the King</th>
+      <td>J.R.R. Tolkein</td>
+      <td>1955</td>
+      <td>Allen & Unwin</td>
+      <td>634</td>
+        <td>$16</td>
+    </tr>
+      <tr>
+      <th scope="row">Pedro Paramo</th>
+      <td>Juan Rulfo</td>
+      <td>1955</td>
+      <td>Fondo de Vultura Economica</td>
+      <td>243</td>
+        <td>$8</td>
+    </tr>
+      <tr>
+      <th scope="row">Minecraft: The Complete Collection</th>
+      <td>Stephanie Milton et. al</td>
+      <td>2015</td>
+      <td>Redstone Books</td>
+      <td>65</td>
+        <td>$6</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr v-for="b in booklist">
+      <td>{{b.title}}</td>
+      <td>{{b.author}}</td>
+      <td>{{b.year}}</td>
+      <td>{{b.publisher}}</td>
+      <td>{{b.pages}}</td>
+      <td>{{ prettyDollar(b.msrp)}}</td>
+    </tr>
+  </tbody>
+</table>
+-->
           
                 </tbody>  
           
