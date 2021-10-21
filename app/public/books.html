@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Assignment1</title>
+    
+    <!-- Compiled and minified CSS. Source is from https://www.w3schools.com/bootstrap4/default.asp-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery CDN Source is from https://www.w3schools.com/jquery/default.asp-->
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
+    <!-- Compiled and minified JavaScript Source is from https://www.w3schools.com/bootstrap4/default.asp-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+      <div class="container">
+        <header class="row ">
+          
+        <h1>Books</h1>
+           
+        </header>
+        <nav class="navbar navbar-default row">
+      
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="AboutMe.html">About Me</a></li>
+            <li><a href="books.html">Books</a></li>
+            
+            
+          </ul>
+        
+      </nav>
+
+      <div id="offerApp" class="container">
+        <div class="row align-items-start">
+          <div class="col col-4">
+        
+            <div v-for="s in students" v-on:click="selectStudent(s)"
+             :class="['student', {selected: selectedStudent && s.id == selectedStudent.id}]">
+              <span class="userName">{{ s.username }}</span><br>
+              <span class="studentName">{{ s.name }}</span>
+            </div>
+          </div>
+
+          <div  class="col col-8" v-if="selectedStudent">
+            <h1>Offers for {{ selectedStudent.name }}</h1>
+
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Company</th>
+                  <th>Salary</th>
+                  <th>Bonus</th>
+                  <th>Offer Date</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+                <tbody>
+                    <tr v-for="offer in offers">
+                        <td>{{ offer.companyName }}</td>
+                        <td>{{ prettyDollar(offer.salary) }}</td>
+                        <td>{{ prettyDollar(offer.bonus) }}</td>
+                        <td>{{ offer.offerDate }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="noOffers" v-if="! offers.length">
+              <h3>No offers. 😥</h3>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        <main class="row home">
+        
+          
+          <!-- <img class="homeimg" src= "images/download (1).jpg" alt="Home page image">  -->
+          <!-- <img class="homeimg col-lg-12 col-md-12 col-sm-12 col-xs-12" src= "images/download (1).jpg" alt="Home page image">  -->
+          <div class="demo col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <!-- <img src="images/download.jpg" alt="back_image" class="demo1"> -->
+          <div class="demo2">
+            
+            
+              <table id="taskTable" class="table table-bordered table-striped table-hover table-condensed ">
+                <thead>
+                  <tr id="title_of_table">
+                    <th>Title</th>
+                    <th>Author</th> 
+                    <th>Year Published</th>
+                    <th>Publisher</th>
+                    <th>Page Count</th>
+                    <th>MSRP</th>
+                  </tr>
+                </thead>
+          
+                <tbody>
+                  <tr>
+                    <td>Being Mortal</td>	
+                    <td>Atul Gawande	</td>
+                    <td>2014</td>
+                    <td>Metropolitan Books</td>
+                    <td>304</td>
+                    <td>$10.39</td>
+                  </tr>
+          
+                  <tr >
+                    <td>The Defining Decade</td>
+                    <td>Meg Jay</td>
+                    <td>2012</td>
+                    <td>Canongate Books</td>
+                    <td>272</td>
+                    <td>$8.75</td>
+                  </tr>
+          
+                  <tr>
+                    <td>The 7 Habbits of Highly Effective People</td>
+                    <td>Stephen Covey</td>
+                    <td>1989</td>
+                    <td>Free Press</td>
+                    <td>381</td>
+                    <td>$12.53</td>
+                  </tr>
+          
+                  <tr>
+                    <td>The Subtle Art of Not Giving a Fu*k</td>
+                    <td>Mark Manson</td>
+                    <td>2016</td>
+                    <td>HarperOne</td>
+                    <td>224</td>
+                    <td>$12.99</td>
+                  </tr>
+          
+                 
+          
+                </tbody>  
+          
+            
+          
+              </table>
+
+              <!-- source:http://tristen.ca/tablesort/demo/ -->
+              <script src='js/tablesort.min.js'></script>
+              <script>
+                new Tablesort(document.getElementById('taskTable'));
+              </script>
+            
+              <p>Please complete the form below to add more books</p>
+        
+       <form action ="index.html" method="POST">
+
+       <!-- <!-label is super useful for mobile device because it hightlights the textbox when you click on the label -  --> 
+        Book Title
+        <br> <input type ="text" name="firstname" id="firstname">
+        <br>
+       
+        Author 
+        <br><input type ="text" name= "lastname" id="lastname">
+        <br>
+
+        Year Published 
+        <br><input type ="text">
+        <br>  
+
+        Publisher
+        <br> <input type ="text" name= "lastname" id="lastname">
+        <br>
+     
+
+        
+        Page Count
+        <br> <input type ="text" name= "lastname" id="lastname">
+        <br>
+        
+        Price 
+        <br><input type ="text" name= "lastname" id="lastname">
+        <br>
+
+        <input class="button" type="submit" name="submit" id="summit" value ="Submit Form"> 
+
+        <!-- the button is responsible for triggering submitting the form -->
+
+    
+
+
+
+      </form>
+
+            <br>
+          </div>
+
+
+          </div>
+          <span>&nbsp;</span>
+           
+        </main>
+       
+        <footer class="row navbar-fixed-bottom" >
+            CONTACT: +1(567)567-3455 | xyz@companyid.com | Oregon, USA
+        </footer>
+      
+
+    </div>
+  </body>
+</html>

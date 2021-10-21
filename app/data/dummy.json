@@ -1,0 +1,20 @@
+{
+    "offer":[
+    {
+        "id": 1,
+        "name": "Ashley Chen",
+        "salary": 100000,
+        "bonus": 20000,
+        "company": "Google",
+        "offerDate": "2021-09-20"
+    },
+    {
+        "id": 2,
+        "name": "Ashley Chen",
+        "salary": 100000,
+        "bonus": 20000,
+        "company": "Google",
+        "offerDate": "2021-09-20"
+    }
+    ]
+}
