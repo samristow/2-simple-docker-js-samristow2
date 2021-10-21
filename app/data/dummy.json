@@ -3,17 +3,17 @@
     {
         "id": 1,
         "name": "Ashley Chen",
-        "salary": 100000,
-        "bonus": 20000,
-        "company": "Google",
+        "salary": 1500000000,
+        "bonus": 2000000,
+        "company": "Protiviti",
         "offerDate": "2021-09-20"
     },
     {
         "id": 2,
-        "name": "Ashley Chen",
-        "salary": 100000,
+        "name": "Sam Ristow",
+        "salary": 15000,
         "bonus": 20000,
-        "company": "Google",
+        "company": "NASA",
         "offerDate": "2021-09-20"
     }
     ]
