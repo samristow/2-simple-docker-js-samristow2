@@ -1,0 +1,4 @@
+MYSQL_DATABASE=dbserver2
+MYSQL_HOST=database-1.cyagr2c8m4ld.us-east-2.rds.amazonaws.com
+MYSQL_USER=sristow
+MYSQL_PASSWORD=Razziedognonmom33$

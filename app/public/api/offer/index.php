@@ -1,5 +1,5 @@
 <?php
-require 'class/DbConnection.php';
+require 'app/class/DbConnection.php';
 
 // Step 1: Get a datase connection from our helper class
 $db = DbConnection::getConnection();
